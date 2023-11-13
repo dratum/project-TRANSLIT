@@ -1,0 +1,142 @@
+body {
+	box-sizing: border-box;
+	background-image: url("/project-translit/icons/jigar-panchal-ExBVfciaRAM-unsplash.jpg");
+}
+@font-face {
+	font-family: "Plex";
+	src: url(/project-translit/fonts/IBMPlexMono-Bold.ttf);
+}
+@font-face {
+	font-family: "Plex-regular";
+	src: url(/project-translit/fonts/IBMPlexMono-Medium.ttf);
+}
+header {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 50px;
+}
+.header {
+	font-family: Plex;
+	font-size: 40px;
+	font-weight: 600;
+	line-height: 52px;
+	letter-spacing: -0.08em;
+	text-align: center;
+	color: rgb(218, 223, 147);
+}
+main {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.input {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	width: 500px;
+}
+
+input {
+	width: 479px;
+	height: 50px;
+	border-radius: 14px;
+	font-size: 18px;
+	font-family: "Plex-regular";
+	/* font-style: italic; курсор залезает на букву */
+	font-weight: 400;
+	line-height: 23px;
+	letter-spacing: 1px;
+	text-align: left;
+	/* border: 2px solid black; */
+	border: none;
+	padding-left: 15px;
+	outline: none;
+}
+
+.button-add-word {
+	position: absolute;
+	margin-left: 370px;
+	border-radius: 8px;
+	color: white;
+	background-color: black;
+	width: 107px;
+	height: 38px;
+	font-size: 18px;
+	border: none;
+}
+
+.table-of-words {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	margin-top: 50px;
+	width: 500px;
+}
+
+.russian-word {
+	border-right: 2px solid black;
+	background-color: rgba(240, 240, 240, 0.753);
+	width: 248px;
+	height: 40px;
+	border-radius: 8px 0 0 8px;
+}
+.translate-word {
+	background-color: rgba(165, 161, 161, 0.747);
+	width: 250px;
+	height: 40px;
+	position: relative;
+	border-radius: 0 8px 8px 0;
+}
+span {
+	font-size: 18px;
+	font-family: Plex-regular;
+	font-style: italic;
+	font-weight: 400;
+	line-height: 40px;
+	letter-spacing: -0.03em;
+	margin-left: 15px;
+}
+.delete-string {
+	position: absolute;
+	right: 10px;
+	margin-top: 10px;
+	border: none;
+	background-color: rgba(131, 129, 129, 0);
+}
+
+.button-reset-all {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 60px;
+}
+#button-remove {
+	width: 176px;
+	height: 38px;
+	font-family: "Plex-regular";
+	background-color: rgba(122, 114, 114, 0.63);
+	gap: 12px;
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 30px;
+	letter-spacing: -0.05em;
+	border: none;
+	padding: 6px, 10px, 8px, 10px;
+	border-radius: 8px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-style: normal;
+}
+button:hover {
+	cursor: pointer;
+}
+button:active {
+	transform: scale(0.95);
+	transition: 50ms;
+}
