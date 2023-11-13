@@ -13,7 +13,6 @@ function addWord(e) {
   newSpan.appendChild(document.createTextNode(word));
   words.appendChild(newDiv);
   newDiv.appendChild(newSpan);
-  newSpan.appendChild(word);
 }
 
 button.addEventListener('click', addWord);
