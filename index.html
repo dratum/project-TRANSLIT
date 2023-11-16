@@ -1,39 +1,50 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8" name="viewport" content="width=device-width" />
     <link rel="stylesheet" href="./css/index.css" />
     <script defer src="./index.js"></script>
     <title>Транслит</title>
   </head>
   <body>
-    <header><div class="header">T.R.A.N.S.L.I.T.</div></header>
-    <main>
-      <div class="input">
-        <input
-          id="word-input"
-          type="text"
-          placeholder="Начните вводить текст"
-        />
-        <button class="button-add-word" type="submit">TRANSLIT</button>
-      </div>
-      <div class="table-of-words">
-        <div class="russian-word">
-          <span>1 Привет</span>
-        </div>
-        <div class="translate-word">
-          <span>Privet</span>
-          <button type="button" class="delete-string">
-            <img src="./icons/Group 1.svg" alt="delete" />
+    <div class="content">
+      <header><div class="header">T.R.A.N.S.L.I.T.</div></header>
+      <main>
+        <div class="input">
+          <input
+            id="word-input"
+            type="text"
+            placeholder="Начните вводить текст"
+            type="range=10"
+          />
+          <button id="button" class="button-add-word" type="submit">
+            TRANSLIT
           </button>
         </div>
-      </div>
-      <div class="button-reset-all">
-        <button id="button-remove" type="reset">
-          <img src="./icons/Group 7.svg" alt="delete" />
-          Очистить всё
-        </button>
-      </div>
-    </main>
+        <div class="table-of-words">
+          <div class="words-left">
+            <div id="n0" class="russian-word phrase">
+              <span hidden-text="Привет">Привет</span>
+            </div>
+          </div>
+          <div class="words-right">
+            <div id="m0" class="translate-word phrase">
+              <span hidden-text="Privet">Privet</span>
+              <img
+                class="delete-string"
+                src="./icons/Group 1.svg"
+                alt="delete"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="button-reset-all">
+          <button id="button-remove" type="reset">
+            <img src="./icons/Group 7.svg" alt="delete" />
+            Очистить всё
+          </button>
+        </div>
+      </main>
+    </div>
   </body>
 </html>
