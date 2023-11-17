@@ -4,7 +4,6 @@ const words = document.querySelector('.table-of-words');
 const wordsRu = document.querySelector('.words-left');
 const wordsEn = document.querySelector('.words-right');
 const clearWords = document.getElementById('button-remove');
-const deleteString = document.querySelector('.delete-string');
 let targetId = 1;
 const glossaryList = {
   а: 'a',
@@ -76,7 +75,6 @@ const glossaryList = {
   Я: 'Ya',
 };
 
-// транслитерация
 function generateTranslit(word) {
   let translitValue = '';
   for (let i = 0; i < word.length; i += 1) {
@@ -89,15 +87,14 @@ function generateTranslit(word) {
   return translitValue;
 }
 
-// добавляем слово в словарь и транслитерируем его
-function addWord(e) {
+function addWord() {
   const word = input.value;
 
   function trimWord(word) {
-    const maxLength = 15;
+    const maxLength = 13;
     let result = word;
     if (word.length > maxLength) {
-      result = result.slice(0, 15) + '...';
+      result = result.slice(0, 13) + '...';
     }
     return result;
   }
@@ -137,7 +134,7 @@ function addWord(e) {
   input.value = '';
   input.focus();
 }
-// клик и кнопка enter на добавление слова
+
 button.addEventListener('click', addWord);
 input.addEventListener('keydown', (event) => {
   if (event.key === 'Enter') {
@@ -148,33 +145,33 @@ input.addEventListener('keydown', (event) => {
   }
 });
 
-// удаляем любую строчку со словами
 function deleteStringWithWords(e) {
-  console.log(1);
   const word = e.target.closest('.phrase');
   const wordId = word.id;
   const wordRu = document.getElementById('n' + wordId.substring(1));
-  word.remove();
-  wordRu.remove();
-},
+  if (word === document.getElementById('m0')) {
+    return;
+  } else {
+    word.remove();
+    wordRu.remove();
+  }
+}
 wordsEn.addEventListener('click', deleteStringWithWords);
 
-// Очищаем словарик на странице
 function deleteAllString() {
-  while (wordsRu.lastChild) {
+  while (wordsRu.children.length > 1) {
     wordsRu.removeChild(wordsRu.lastChild);
   }
-  while (wordsEn.lastChild) {
+  while (wordsEn.children.length > 1) {
     wordsEn.removeChild(wordsEn.lastChild);
   }
 }
 clearWords.addEventListener('click', deleteAllString);
 
-// показываем полный текст длинных слов
 function showMoreText(event) {
   const hiddenText = event.target.getAttribute('hidden-text');
   if (event.target.tagName !== 'SPAN') return;
-  if (hiddenText.length > 15) {
+  if (hiddenText.length > 13) {
     event.target.parentNode.classList.add('popup');
   }
 }
