@@ -4,4 +4,6 @@
 
 HTML+CSS+JavaScript
 
+[link](https://dratum.github.io/project-TRANSLIT/) on GitHub Pages. 
+
 Enter the russian word! :)
