@@ -1,13 +1,13 @@
 body {
-	background-image: url("/project-translit/src/icons/jigar-panchal-ExBVfciaRAM-unsplash.jpg");
+	background-image: url("../icons/jigar-panchal-ExBVfciaRAM-unsplash.jpg");
 }
 @font-face {
 	font-family: "Plex";
-	src: url(/project-translit/src/fonts/IBMPlexMono-Bold.ttf);
+	src: url(../fonts/IBMPlexMono-Bold.ttf);
 }
 @font-face {
 	font-family: "Plex-regular";
-	src: url(/project-translit/src/fonts/IBMPlexMono-Medium.ttf);
+	src: url(../fonts/IBMPlexMono-Medium.ttf);
 }
 
 .content {
