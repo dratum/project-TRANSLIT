@@ -50,7 +50,7 @@ export function addWord() {
     newSpanEn.setAttribute('hidden-text', generateTranslit(word));
     newDeleteString.className = 'delete-string';
     newDeleteString.setAttribute('alt', 'delete');
-    newDeleteString.setAttribute('src', '../icons/Group 1.svg');
+    newDeleteString.setAttribute('src', './src/icons/Group 1.svg');
 
     newSpanEn.append(document.createTextNode(translitValue));
     wordsEn.append(newDivEn);
